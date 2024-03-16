@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenshinStats Status</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ecf0f1;
+            color: #34495e;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            color: #2c3e50;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 5px;
+            color: #fff;
+            transition: background-color 0.3s;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .button-green {
+            background-color: #3498db;
+        }
+
+        .button-green:hover {
+            background-color: #2980b9;
+        }
+
+        .button-red {
+            background-color: #e74c3c;
+        }
+
+        .button-red:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GenshinStats is ready!</h1>
+    </header>
+    <div class="main-content">
+        <h2>Server Start Time: {{ server_info["Server Start Time"] }}</h2>
+        <h2>Uptime: {{ server_info["Uptime"] }}</h2>
+        <h2>Downtime: {{ server_info["Downtime"] }}</h2>
+        <h2>Current Date and Time: {{ server_info["Current Date and Time"] }}</h2>
+    </div>
+    <!-- Container for the buttons with three equal-sized buttons -->
+    <div class="button-container">
+        <a class="button button-green" href="https://discord.com/oauth2/authorize?&client_id=1152079618719883304&scope=applications.commands+bot&permissions=8" target="_blank" rel="noopener">Invite SwitchMOD</a>
+        <a class="button button-green" href="https://discord.gg/6H3nzKfdyT" target="_blank" rel="noopener">Support Server</a>
+        <a class="button button-red" href="https://kickcar.me" target="_blank" rel="noopener">Go Back to Homepage</a>
+    </div>
+</body>
+</html>
